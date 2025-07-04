@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
+api=app
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Change to your frontend URL in production
