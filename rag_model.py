@@ -5,7 +5,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 import os
 import pickle
-from google import genai
+import google.generativeai as genai
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 client=genai.Client(api_key="AIzaSyDeaiOo290CBQ2KpYJRHpfxjE59dT8lXoY")
