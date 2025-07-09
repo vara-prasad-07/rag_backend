@@ -24,8 +24,5 @@ def ask_question(request: QueryRequest):
     answer = bot.query(request.query)
     return {"answer": answer}
     
-@app.get("/")
-def read_root():
-    return {"message": "Hello from Railway!"}
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
+    uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
