@@ -2,8 +2,6 @@ from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from rag_model import chatbot
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
-import os
 
 
 app = FastAPI()
@@ -25,4 +23,6 @@ def ask_question(request: QueryRequest):
     return {"answer": answer}
     
 if __name__ == "__main__":
+    import os
+    import uvicorn
     uvicorn.run("app:app", host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
