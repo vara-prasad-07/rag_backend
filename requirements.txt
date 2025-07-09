@@ -1,7 +1,4 @@
-gunicorn
-fastapi
-uvicorn
-pydantic
+gradio
 langchain
 langchain-community
 faiss-cpu
